@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Counter App</title>
+         <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <center> <header><h1><u>Counter App</u></h1></header></center>
+         <div class="inc">
+                  <button  class="v" id="i-btn" onclick="incr()"> Increase</button>
+                   <div  class="x "id="counter">    0 </div>
+                 
+                  <!-- <button  onclick="equ()"> 0</button> -->
+                  <button class="v" id='d-btn' onclick="dcr()"> Decrease </button>
+                  
+                  
+            </div>
+            <div class="reset">
+               <button class="t" id='t-btn' onclick="equ()"> Reset </button>
+                </div>
+                                <script>
+                          let number=0;
+                           function incr()
+                           {
+                                    number+=1;
+                                    update();
+                           }
+                           
+                           function dcr()
+                           {
+                                    number-=1;
+                                    update();
+                           }
+                           function equ()
+                           {
+                                    number=0;
+                                    update();
+                           }
+                           
+
+
+                          function update()
+                          {
+                           document.getElementById('counter').innerHTML=number;
+                         
+                          }
+                  </script>
+</body>
+</html>
