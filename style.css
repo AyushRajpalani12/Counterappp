@@ -47,6 +47,11 @@
          padding: 10px; 
 } */
 
+.k{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+}
 
 .inc
 {
@@ -54,6 +59,8 @@
          display: flex;
          justify-content: center;
          text-align: center;
+         /* margin: 10px; */
+         /* padding: 50px ; */
 }
 
 

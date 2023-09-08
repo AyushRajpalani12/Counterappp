@@ -7,21 +7,59 @@
          <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-        <center> <header><h1><u>Counter App</u></h1></header></center>
+        <center> <header><h1><u>Cricket Score Counter</u></h1></header></center>
+        <div class="k"> <h1>Run</h1></div>
          <div class="inc">
                   <button  class="v" id="i-btn" onclick="incr()"> Increase</button>
                    <div  class="x "id="counter">    0 </div>
                  
                   <!-- <button  onclick="equ()"> 0</button> -->
-                  <button class="v" id='d-btn' onclick="dcr()"> Decrease </button>
-                  
-                  
+                  <button class="v" id='d-btn' onclick="dcr()"> Decrease </button>    
             </div>
             <div class="reset">
                <button class="t" id='t-btn' onclick="equ()"> Reset </button>
                 </div>
+
+
+
+
+
+                <div class="k"> <h1>Wicket</h1></div>
+         <div class="inc">
+                  <button  class="v" id="i-btn" onclick="incr1()"> Increase</button>
+                   <div  class="x "id="counter1">    0 </div>
+                 
+                  <!-- <button  onclick="equ()"> 0</button> -->
+                  <button class="v" id='d-btn' onclick="dcr1()"> Decrease </button>
+            <h1></h1>
+                  
+            </div>
+            <div class="reset">
+               <button class="t" id='t-btn' onclick="equ1()"> Reset </button>
+                </div>
+
+
+
+
+
+                <div class="k"> <h1>Over</h1></div>
+         <div class="inc">
+                  <button  class="v" id="i-btn" onclick="incr2()"> Increase</button>
+                   <div  class="x "id="counter2">    0 </div>
+                 
+                  <!-- <button  onclick="equ()"> 0</button> -->
+                  <button class="v" id='d-btn' onclick="dcr2()"> Decrease </button>
+            <h1></h1>
+                  
+            </div>
+            <div class="reset">
+               <button class="t" id='t-btn' onclick="equ2()"> Reset </button>
+                </div>
                                 <script>
                           let number=0;
+
+
+                          //for run
                            function incr()
                            {
                                     number+=1;
@@ -39,13 +77,68 @@
                                     update();
                            }
                            
-
-
-                          function update()
+                           function update()
                           {
                            document.getElementById('counter').innerHTML=number;
                          
                           }
-                  </script>
+
+
+                          //for wicket
+                           function incr1()
+                           {
+                                 number+=1;
+                              if(number === 12)
+                              {alert('CANT INCERES')
+                                    number=11;
+                              }
+                              update1();
+                           }
+                           
+                           function dcr1()
+                           {
+                                    number-=1;
+                                    update1();
+                           }
+                           function equ1()
+                           {
+                                    number=0;
+                                    update1();
+                           }
+                           
+                           function update1()
+                          {
+                           document.getElementById('counter1').innerHTML=number;
+                         
+                          }
+
+
+                          //for run
+                           function incr2()
+                           {
+                                    number+=1;
+                                    update2();
+                           }
+                           
+                           function dcr2()
+                           {
+                                    number-=1;
+                                    update2();
+                           }
+                           function equ2()
+                           {
+                                    number=0;
+                                    update2();
+                           }
+                           
+                           function update2()
+                          {
+                           document.getElementById('counter2').innerHTML=number;
+                         
+                          }
+                       </script>
+
+                         
+                 
 </body>
 </html>
